@@ -1,13 +1,60 @@
 @import "~bootstrap/scss/bootstrap.scss";
+body{
+    background-image: url("https://www.radiocable.com/imagenes/autopista-luces.jpg");
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.containerLights {
+    background-color: #D3EDE9 0.7;
+    border-radius: 20px;
+    text-align: center;
+    display: flex;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    margin-top: 3rem;
+    border: #D3EDE9 solid 2px;
+    min-width: 15rem;
+}
+.light {
+    width: 5rem;
+    height: 5rem;
+    background-color: grey;
+    border-radius: 100px;
+    margin-bottom: 2rem;
+    margin-right: 5rem;
+    margin-left: 5rem;
+    margin-top: 2rem;
+    padding: 3rem;
+}
+.offLight {
+    width: 5rem;
+    height: 5rem;
+    background-color: grey;
+    border-radius: 100px;
+}
+.red {
+    width: 5rem;
+    height: 5rem;
+    background-color: 	#FF0000;
+    border-radius: 100px;
+    border: #D3EDE9 solid 2px;
+}
 
-/* 
-
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
-
-*/
+.yellow {
+    width: 5rem;
+    height: 5rem;
+    background-color:#FFFF00;
+    border-radius: 100px;
+    border: #D3EDE9 solid 2px;
+}
+.green {
+    width: 5rem;
+    height: 5rem;
+    background-color: #32CD32;
+    border-radius: 100px;
+    border: #D3EDE9 solid 2px;
+}
+.glow {
+    box-shadow: 0 0 30px 10px #D3EDE9;
+}
