@@ -1,6 +1,7 @@
-import React, { Fragment, useState } from "react";
+import React, { useState } from "react";
 import TrafficLight from "./trafficlight.jsx";
 
+// Declaramos Home con su Hook useState inicializao al color de las luces
 const Home = () => {
 	const [color, setColor] = useState({
 		stop: "red",
@@ -8,43 +9,42 @@ const Home = () => {
 		go: "green"
 	});
 
+	// Devolvemos las luces con su brillo segun donde hagamos el click
 	return (
-		<Fragment>
-			<div className="container text-center justify-content-center">
-				<div className="containerLights row">
-					<TrafficLight
-						color={color.stop}
-						clickChange={() => {
-							setColor({
-								stop: "red glow",
-								warning: "yellow",
-								go: "green"
-							});
-						}}
-					/>
-					<TrafficLight
-						color={color.warning}
-						clickChange={() => {
-							setColor({
-								stop: "red",
-								warning: "yellow glow",
-								go: "green"
-							});
-						}}
-					/>
-					<TrafficLight
-						color={color.go}
-						clickChange={() => {
-							setColor({
-								stop: "red",
-								warning: "yellow",
-								go: "green glow "
-							});
-						}}
-					/>
-				</div>
+		<div className="container text-center justify-content-center">
+			<div className="containerLights row">
+				<TrafficLight // Llamamos a TrafficLight 3 veces para ver que hacemos con las luces
+					color={color.stop} //usamos las proptypes
+					clickChange={() => {
+						setColor({
+							stop: "red glow",
+							warning: "yellow",
+							go: "green"
+						});
+					}}
+				/>
+				<TrafficLight
+					color={color.warning} //usamos las proptypes
+					clickChange={() => {
+						setColor({
+							stop: "red",
+							warning: "yellow glow",
+							go: "green"
+						});
+					}}
+				/>
+				<TrafficLight
+					color={color.go} //usamos las proptypes
+					clickChange={() => {
+						setColor({
+							stop: "red",
+							warning: "yellow",
+							go: "green glow "
+						});
+					}}
+				/>
 			</div>
-		</Fragment>
+		</div>
 	);
 };
 export default Home;
